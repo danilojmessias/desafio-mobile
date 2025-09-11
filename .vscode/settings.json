@@ -1,0 +1,35 @@
+{
+    "cucumber.features": [
+        "features/**/*.feature"
+    ],
+    "cucumber.glue": [
+        "steps/**/*.js"
+    ],
+    "cucumber.parameterTypes": [],
+    "cucumber.snippets": {
+        "Given": {
+            "prefix": "Given",
+            "body": [
+                "Given('${1:step_definition}', async function () {",
+                "\t$0",
+                "});"
+            ]
+        },
+        "When": {
+            "prefix": "When",
+            "body": [
+                "When('${1:step_definition}', async function () {",
+                "\t$0",
+                "});"
+            ]
+        },
+        "Then": {
+            "prefix": "Then",
+            "body": [
+                "Then('${1:step_definition}', async function () {",
+                "\t$0",
+                "});"
+            ]
+        }
+    }
+}
