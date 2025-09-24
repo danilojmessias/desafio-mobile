@@ -1,4 +1,5 @@
 import { Then, When } from '@wdio/cucumber-framework';
+import { expect } from '@wdio/globals';
 import LoginPage from '../pageobjects/login.page';
 When('I fill login with valid credentials', async () => {
     await LoginPage.fillLogin('test@test.com', '12345678')

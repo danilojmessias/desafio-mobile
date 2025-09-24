@@ -1,4 +1,5 @@
 import { Then, When } from '@wdio/cucumber-framework';
+import { expect } from '@wdio/globals';
 
 import SignUpPage from '../pageobjects/signUp.page';
 
