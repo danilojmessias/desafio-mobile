@@ -3,8 +3,8 @@
     "features/**/*.feature"
   ],
   "cucumber.glue": [
-    "features/step-definitions/**/*.ts",
-    "features/step-definitions/**/*.ts"
+    "step-definitions/**/*.ts",
+    "step-definitions/**/*.ts"
   ],
   "cucumber.snippets.includeActor": false,
   "cucumber.completion.enable": true,
@@ -22,11 +22,11 @@
   },
   "cucumber.stepDefinitions": [
     {
-      "pattern": "features/step-definitions/**/*.ts",
+      "pattern": "step-definitions/**/*.ts",
       "source": "typescript"
     },
     {
-      "pattern": "features/step-definitions/**/*.*.ts",
+      "pattern": "step-definitions/**/*.*.ts",
       "source": "typescript"
     }
   ]
