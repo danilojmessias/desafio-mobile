@@ -1,5 +1,6 @@
-Feature: The Internet Guinea Pig Website
+Feature: Sign Up Feature
 
+  @signup
   Scenario: As a user, I can sign up into the app
 
     Given I open the app

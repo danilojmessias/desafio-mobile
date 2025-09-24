@@ -1,6 +1,7 @@
-Feature: The Internet Guinea Pig Website
+Feature: Forms Feature
 
-  Scenario: As a user, I can sign up into the app
+  @forms
+  Scenario: As a user, I can fill forms in the app
 
     Given I open the app
     When I go to forms page

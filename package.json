@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "wdio run ./wdio.conf.ts",
+    "test:all": "node run-test.js -a",
+    "test:tag": "node run-test.js -t",
+    "test:file": "node run-test.js -f",
+    "test:help": "node run-test.js -h",
     "wdio": "wdio run ./wdio.conf.ts"
   },
   "keywords": [],
