@@ -1,8 +1,8 @@
-Feature: Cadastro no aplicativo Native Demo Bem sucedido
+Feature: The Internet Guinea Pig Website
 
-  Scenario: Usuário realiza cadastro no app
-    Given que o usuário abre o app 
-    When o usuário acessa a tela de cadastro
-    And preenche os dados de cadastro
-    Then o usuário deve ter se cadastro com sucesso no aplicativo
+  Scenario: As a user, I can sign up into the app
 
+    Given I open the app
+    When I go to login page
+    And I fill sign up with valid credentials
+    Then I Validate the success Sign Up Message

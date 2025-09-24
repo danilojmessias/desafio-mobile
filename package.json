@@ -1,44 +1,26 @@
 {
-  "name": "mobile-test-automation",
+  "name": "desafio-mobile",
   "version": "1.0.0",
-  "description": "Automação de testes mobile com WebdriverIO, Appium, Cucumber e PactumJS",
   "main": "index.js",
   "scripts": {
-    "test:mobile": "wdio wdio.conf.ts",
-    "test:api": "mocha tests/*.test.js --timeout 60000"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wdio": "wdio run ./wdio.conf.ts"
   },
-  "keywords": [
-    "webdriverio",
-    "appium",
-    "cucumber",
-    "pactum",
-    "mobile testing"
-  ],
-  "author": "Danilo",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "@wdio/appium-service": "^9.0.0",
-    "@wdio/cli": "^9.0.0",
-    "@wdio/cucumber-framework": "^9.0.0",
-    "@wdio/local-runner": "^9.0.0",
-    "@wdio/mocha-framework": "^9.0.0",
-    "appium": "^2.5.0",
-    "chai": "^5.1.0",
-    "pactum": "^3.5.0"
+    "@wdio/cli": "^9.19.2",
+    "@wdio/mocha-framework": "^9.19.2",
+    "webdriverio": "^9.19.2"
   },
   "devDependencies": {
-    "appium-uiautomator2-driver": "^2.34.1",
-    "mocha": "^10.7.0"
-  },
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danilojmessias/desafio-mobile.git"
-  },
-  "bugs": {
-    "url": "https://github.com/danilojmessias/desafio-mobile/issues"
-  },
-  "homepage": "https://github.com/danilojmessias/desafio-mobile#readme"
+    "@wdio/appium-service": "^9.19.2",
+    "@wdio/cucumber-framework": "^9.19.2",
+    "@wdio/local-runner": "^9.19.2",
+    "@wdio/spec-reporter": "^9.19.2",
+    "@wdio/visual-service": "^9.0.0",
+    "appium-uiautomator2-driver": "^5.0.3"
+  }
 }
