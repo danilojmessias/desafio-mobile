@@ -3,10 +3,10 @@ import { $ } from '@wdio/globals'
 
 class SignUpPage {
 
-    public get signUpButton(){
+    public get signUpButton() {
         return $('~button-sign-up-container')
     }
-    
+
     public get inputEmail() {
         return $('~input-email');
     }
@@ -15,7 +15,7 @@ class SignUpPage {
         return $('~input-password');
     }
 
-    public get inputConfirmPassword(){
+    public get inputConfirmPassword() {
         return $('~input-repeat-password')
     }
 
@@ -27,19 +27,23 @@ class SignUpPage {
         return $('android=new UiSelector().resourceId("android:id/message")');
     }
 
+    public get invalidEmailMessageError() {
+        return $('android=new UiSelector().text("Please enter a valid email address")')
+    }
+
     public async fillSignUp(username: string, password: string) {
         await this.signUpButton.waitForDisplayed({ timeout: 10000 });
         await this.signUpButton.click();
-        
+
         await this.inputEmail.waitForDisplayed({ timeout: 10000 });
         await this.inputEmail.setValue(username);
-        
+
         await this.inputPassword.waitForDisplayed({ timeout: 10000 });
         await this.inputPassword.setValue(password);
-        
+
         await this.inputConfirmPassword.waitForDisplayed({ timeout: 10000 });
         await this.inputConfirmPassword.setValue(password);
-        
+
         await this.btnSubmit.waitForDisplayed({ timeout: 10000 });
         await this.btnSubmit.click();
     }
@@ -47,6 +51,11 @@ class SignUpPage {
     public async assertSuccessMessage() {
         await this.successMessage.waitForDisplayed({ timeout: 15000 });
         return await this.successMessage.isDisplayed();
+    }
+
+    public async assertInvalidEmailMessage() {
+        await this.invalidEmailMessageError.waitForDisplayed({ timeout: 1000 });
+        return await this.invalidEmailMessageError.isDisplayed();
     }
 
     /**

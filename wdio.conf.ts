@@ -54,7 +54,10 @@ export const config: WebdriverIO.Config = {
         "appium:autoGrantPermissions": true,
         "appium:autoAcceptAlerts": true,
         "appium:waitForIdleTimeout": 10000,
-        "appium:waitForQuiescence": false
+        "appium:waitForQuiescence": false,
+        // Configurações para garantir estado limpo entre cenários
+        "appium:forceAppLaunch": true,
+        "appium:shouldTerminateApp": true
     }],
 
     //

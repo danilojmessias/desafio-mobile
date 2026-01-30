@@ -27,6 +27,8 @@
     "include": [
         "test",
         "wdio.conf.ts",
-        "features"
-, "pageobjects"    ]
+        "features",
+        "pageobjects",
+        "step-definitions"
+    ]
 }

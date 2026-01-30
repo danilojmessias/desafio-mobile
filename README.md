@@ -93,6 +93,22 @@ O projeto está configurado para executar testes em um emulador Android. Certifi
 2. O emulador Android esteja ativo (emulator-5554)
 3. O arquivo APK esteja no caminho correto: `/Users/mac/Documents/danilo/desafio.apk`
 
+### Comportamento de Reinicialização do App
+
+O projeto está configurado para **reiniciar o aplicativo entre cada cenário**, garantindo que:
+
+- ✅ Cada cenário comece com um estado limpo
+- ✅ Não há interferência entre cenários
+- ✅ Os testes são mais confiáveis e isolados
+- ✅ Screenshots são capturados automaticamente em caso de falha
+
+**Como funciona:**
+- **Antes de cada cenário**: O app é reiniciado completamente
+- **Após cada cenário**: Screenshot é capturado se houver falha
+- **Entre cenários**: Estado é limpo automaticamente
+
+Isso é controlado pelos hooks em [`step-definitions/hooks.ts`](step-definitions/hooks.ts) e pelas configurações do Appium no [`wdio.conf.ts`](wdio.conf.ts).
+
 ## Exemplos de Uso
 
 ```bash
